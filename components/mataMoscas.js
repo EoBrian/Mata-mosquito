@@ -17,12 +17,13 @@ var vida = 3
 
 //4 - função de tempo (se conseguir matar todos os mosquitos neste tempo ganha)
 const display_time = document.getElementsByClassName('timer')[0]
-var time = 100
+var time = 60
 const Cronometro = ()=> {
     time--
     display_time.innerHTML = `<h1>Time: <span style="color:white;">${time}</span> </h1>`
     if (time === 0) {
-        //location.href = 'vitoria.html'
+        clearInterval(gerarMoscas)
+        location.href = 'vitoria.html'
     }
 };setInterval(Cronometro, 1000);
 
@@ -37,7 +38,7 @@ const gerarMoscas = ()=> {
         else if (vida === 1) {display_life[1].src = 'components/img/coracao_vazio.png'}
         else {display_life[2].src = 'components/img/coracao_vazio.png'}
         if (vida < 0) {
-            //location.href = 'perdeu.html'
+            location.href = 'perdeu.html'
         }
     }
     
@@ -56,7 +57,7 @@ const gerarMoscas = ()=> {
     //adiciona a mosca na tela
     display_game.appendChild(mosca)
     
-}; setInterval(gerarMoscas, 2000);
+}; setInterval(gerarMoscas, 1500);
 
 
 //2 - matar moscas
