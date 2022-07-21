@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Mata Moscas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="components/style.css" rel="stylesheet">
+  </head>
+
+  <body onresize="resizeScreen()">
+
+    <header class="menu-aplication">
+    </header>
+
+    <section onload="gerarMoscas()" class=".container" id="root-app">
+      <div class="painel flexbox">
+        
+        
+        <div class="timer"></div>
+
+
+        <div class="life flexbox">
+          <span>
+            <img class="heart-life" src="/components/img/coracao_cheio.png" alt="">
+            <img class="heart-life" src="/components/img/coracao_cheio.png" alt="">
+            <img class="heart-life" src="/components/img/coracao_cheio.png" alt="">
+          </span>
+        </div>
+
+
+      </div>
+    </section>
+
+  <script src="/components/mataMoscas.js"></script>
+  </body>
+
+</html>
