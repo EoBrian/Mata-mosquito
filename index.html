@@ -14,10 +14,10 @@
      <div class="box flexbox">
       <form>
         <div class="buttons">
-          <a href="game.html" class="btn">PLAY</a>
+          <a onclick="IniciarGame()" class="btn">PLAY</a>
         </div>
         <div class="buttons">
-          <select class="btn" name="dificuldade" id="dificuldade">
+          <select class="btn" name="dificuldade" id="nivel">
             <option value="facil">fácil</option>
             <option value="medio">medio</option>
             <option value="impossivel">impossivel</option>
@@ -26,7 +26,17 @@
       </form>
      </div>
     </section>
-    
+
+
+    <script>
+      
+      const IniciarGame = ()=> {
+        var nivel = document.getElementById('nivel').value
+        location.href = 'game.html?' + nivel
+      }
+    </script>
+
+
     <script src="/components/mataMoscas.js"></script>
   </body>
 

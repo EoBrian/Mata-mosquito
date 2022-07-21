@@ -25,9 +25,11 @@
     margin: 10px;
     background-color: blueviolet;
     color: #fff;
+    cursor: pointer;
 }
 
 /*-------root app -----------*/
+
 section.container, #root-app {
     position: relative;
     width: 100%;

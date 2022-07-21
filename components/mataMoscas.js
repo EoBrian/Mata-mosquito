@@ -10,6 +10,21 @@ function resizeScreen () {
     height_screen = window.innerHeight
 }
 
+//nivel de dificudade do game
+var tempo_mosquito_aparece = 0
+var nivel = location.search
+nivel = nivel.replace('?', '')
+
+if (nivel === 'facil') {
+    tempo_mosquito_aparece = 1500
+}else if (nivel === 'medio') {
+    tempo_mosquito_aparece = 1000
+}else {
+    tempo_mosquito_aparece = 780
+}
+
+
+
 //3 - criar função de vida / 3 vidas (se vida for == 0 perde)
 const display_life = document.getElementsByClassName('heart-life')
 var vida = 3
@@ -23,6 +38,7 @@ const Cronometro = ()=> {
     display_time.innerHTML = `<h1>Time: <span style="color:white;">${time}</span> </h1>`
     if (time === 0) {
         clearInterval(gerarMoscas)
+        clearInterval(this)
         location.href = 'vitoria.html'
     }
 };setInterval(Cronometro, 1000);
@@ -57,7 +73,7 @@ const gerarMoscas = ()=> {
     //adiciona a mosca na tela
     display_game.appendChild(mosca)
     
-}; setInterval(gerarMoscas, 1500);
+}; setInterval(gerarMoscas, tempo_mosquito_aparece);
 
 
 //2 - matar moscas
