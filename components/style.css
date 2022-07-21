@@ -50,6 +50,7 @@ section.container, #root-app {
     margin-top: 10px;
 }
 
+
 /*index - page inicial*/
 .box {
     text-align: center;
@@ -66,3 +67,10 @@ section.container, #root-app {
     background: url(/components/img/game_over.png) no-repeat top;
     background-size: 50%;
 }
+
+/*responsive*/
+@media screen and (max-width: 768px){
+    #root-app .painel {width: 100%;}
+    #root-app {background-position: left;}
+}
+
