@@ -26,9 +26,15 @@
     background-color: blueviolet;
     color: #fff;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 /*-------root app -----------*/
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
 section.container, #root-app {
     position: relative;
